@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        tools:layout="@layout/screen_splash"
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.lessonmemorygame.presentation.ui.screens.SplashScreen"
+        android:label="SplashScreen" >
+
+        <action
+            android:id="@+id/action_splashScreen_to_menuScreen"
+            app:destination="@id/menuScreen"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/menuScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_level"
+        android:id="@+id/levelScreen"
+        android:name="uz.gita.lessonmemorygame.presentation.ui.screens.LevelScreen"
+        android:label="LevelScreen" >
+        <action
+            android:id="@+id/action_levelScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+        <action
+            android:id="@+id/action_levelScreen_to_menuScreen"
+            app:destination="@id/menuScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_game"
+        android:id="@+id/gameScreen"
+        android:name="uz.gita.lessonmemorygame.presentation.ui.screens.GameScreen"
+        android:label="GameScreen" >
+        <argument
+            android:name="level"
+            app:argType="uz.gita.lessonmemorygame.data.models.Level" />
+        <action
+            android:id="@+id/action_gameScreen_to_levelScreen"
+            app:destination="@id/levelScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_menu"
+        android:id="@+id/menuScreen"
+        android:name="uz.gita.lessonmemorygame.presentation.ui.screens.MenuScreen"
+        android:label="MenuScreen" >
+        <action
+            android:id="@+id/action_menuScreen_to_levelScreen"
+            app:destination="@id/levelScreen" />
+        <action
+            android:id="@+id/action_menuScreen_to_aboutScreen"
+            app:destination="@id/aboutScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_about"
+        android:id="@+id/aboutScreen"
+        android:name="uz.gita.lessonmemorygame.presentation.ui.screens.AboutScreen"
+        android:label="AboutScreen" >
+        <action
+            android:id="@+id/action_aboutScreen_to_menuScreen"
+            app:destination="@id/menuScreen" />
+    </fragment>
+</navigation>

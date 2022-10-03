@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/icon1"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/app_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="88dp"
+        android:gravity="center"
+        android:text="𝔻𝕚𝕗𝕗𝕚𝕔𝕦𝕝𝕥𝕪"
+        android:textColor="#68D56D"
+
+        android:textSize="@dimen/_40sdp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnEasy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/bg_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMedium"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_gravity="center"
+
+
+        android:background="@drawable/uzun_button"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_15sdp"
+        android:text="@string/medium"
+        android:textColor="#6C6A6A"
+        android:textSize="@dimen/_25sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnEasy"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnEasy"
+        app:layout_constraintTop_toBottomOf="@id/btnEasy" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHard"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:text="@string/hard"
+        android:background="@drawable/uzun_button"
+        android:layout_gravity="center"
+        android:layout_marginBottom="176dp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_15sdp"
+        android:textColor="#6C6A6A"
+        android:textSize="@dimen/_25sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnMedium"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnMedium"
+        app:layout_constraintTop_toBottomOf="@+id/btnMedium"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEasy"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="272dp"
+
+        android:background="@drawable/uzun_button"
+        android:focusable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_15sdp"
+        android:text="@string/easy"
+        android:textColor="#6C6A6A"
+        android:textSize="@dimen/_25sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

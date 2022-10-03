@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Memory Game</string>
+    <string name="app_name1">Memory Game</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="yes">Restart</string>
+    <string name="no">Finish</string>
+    <string name="play">Play</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_corner</item>
+    </style>
+</resources>
